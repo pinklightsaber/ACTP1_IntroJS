@@ -15,8 +15,33 @@ ocuparemos el click derecho.
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+     </script>
+     <style>
+     	.bg {
+			background-image: url("ck.png");
+			background-repeat: no-repeat;
+			     	}
+     </style>
   </head>
   <body>
+  	<button>Hola</button>
+  	<script>
+  		$("button").click(function(){
+  			alert("Con el derecho");
+  		});
+  		$("button").contextmenu(function(){
+  			$("body").addClass("bg");
+  		 });
+  		$("button").mouseleave(function(){
+  			$("body").removeClass("bg");
+  		 }); 		
+  	</script>
+
+
 
   </body>
 </html>
